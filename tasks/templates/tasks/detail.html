@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>DETALLES DE LA TAREA</h1>
+<p>
+  <strong>TITULO:</strong>
+  {{task.title}}
+</p>
+
+<p>
+  <strong>CONTENIDO:</strong>
+  {{task.content}}
+</p>
+<a href="{% url 'tasks:index' %}">HOME</a> |
+<a href="{% url 'tasks:edit' task.id %}">EDITAR</a>
+{% endblock %}
